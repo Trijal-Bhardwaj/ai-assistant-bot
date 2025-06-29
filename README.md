@@ -14,6 +14,28 @@ Your personal AI assistant that sends you timely reminders based on your daily t
 - **🔒 Privacy**: Your personal assistant, no data shared with third parties
 - **📱 Dual-Number Mode**: Natural left/right conversation flow
 
+## 🔒 Security & Privacy
+
+### ⚠️ Important Security Notes
+- **Never commit your `.env` file** to Git (it's already in `.gitignore`)
+- **Use `.env.example`** for sharing code with others
+- **Keep your repository private** to protect sensitive information
+- **Rotate API keys regularly** for better security
+- **Only your number can interact** with the bot (ALLOWED_NUMBERS)
+
+### Environment Variables
+All sensitive information is stored in environment variables:
+- Phone numbers
+- Database connection strings
+- API keys
+- Bot configuration
+
+### Repository Security
+- ✅ `.env` file is ignored by Git
+- ✅ `.env.example` contains only placeholder values
+- ✅ No sensitive data in code files
+- ✅ Private repository recommended
+
 ## 📋 Your Timetable Structure
 
 The bot supports three different schedules:
@@ -64,19 +86,23 @@ cp .env.example .env
 nano .env
 ```
 
-Update the `.env` file:
+Update the `.env` file with your actual values:
 ```env
 # Dual-Number Mode (Recommended)
-SOURCE_NUMBER=917742440642    # Bot's WhatsApp number (e.g., brother's/sister's)
-TARGET_NUMBER=919899998761    # Your WhatsApp number (receives messages)
+SOURCE_NUMBER=your-bot-phone-number    # Bot's WhatsApp number
+TARGET_NUMBER=your-personal-phone-number    # Your WhatsApp number
 SELF_CHAT=false               # Dual-number mode
-ALLOWED_NUMBERS=919899998761  # Only your number can interact
+ALLOWED_NUMBERS=your-personal-phone-number  # Only your number can interact
 
-# Self-Chat Mode (Alternative)
-SOURCE_NUMBER=919899998761    # Your WhatsApp number
-TARGET_NUMBER=919899998761    # Your WhatsApp number (same as SOURCE)
-SELF_CHAT=true                # Self-chat mode
-ALLOWED_NUMBERS=919899998761  # Only your number can interact
+# Database Configuration (Optional)
+MONGODB_URI=your-mongodb-connection-string
+REDIS_URL=your-redis-connection-string
+OPENAI_API_KEY=your-openai-api-key
+
+# Bot Configuration
+BOT_NAME=Your Bot Name
+BOT_STATUS=Your bot status message
+BOT_ABOUT=Your bot about message
 ```
 
 ### 3. Start the Bot
@@ -153,7 +179,7 @@ The bot responds to your messages:
 ## 🔒 Privacy & Security
 
 ### Dual-Number Mode (Recommended)
-- **Bot runs on separate WhatsApp** (brother's/sister's number)
+- **Bot runs on separate WhatsApp** (sends messages)
 - **Only your messages are processed** (ALLOWED_NUMBERS)
 - **Other conversations ignored** (privacy protected)
 - **Natural left/right conversation flow**
@@ -171,13 +197,20 @@ The bot responds to your messages:
 - Keep it running 24/7
 - No costs involved
 
-### Option 2: Railway (Free Tier)
+### Option 2: Northflank (Free 24/7)
+1. Push code to GitHub (private repository)
+2. Connect Northflank to your GitHub repo
+3. Add environment variables in Northflank dashboard
+4. Deploy automatically
+5. True 24/7 operation, no sleep mode
+
+### Option 3: Railway (Free Tier)
 1. Push code to GitHub
 2. Connect Railway to your GitHub repo
 3. Deploy automatically
 4. Free tier available
 
-### Option 3: Render (Free Tier)
+### Option 4: Render (Free Tier)
 1. Create account on Render
 2. Connect your GitHub repo
 3. Deploy as a web service
@@ -192,7 +225,8 @@ ai-assistant/
 ├── timetable.json          # Your schedule data
 ├── voiceGenerator.py       # Voice message generator
 ├── package.json            # Node.js dependencies
-├── .env.example           # Configuration template
+├── .env.example           # Configuration template (safe to share)
+├── .env                   # Your actual config (never commit)
 └── README.md              # This file
 ```
 

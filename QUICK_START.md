@@ -18,7 +18,7 @@ chmod +x setup.sh
 Edit `.env` file:
 ```env
 # Dual-Number Mode (Recommended)
-SOURCE_NUMBER=917742440642    # Bot's WhatsApp number (e.g., brother's/sister's)
+SOURCE_NUMBER=917742440642    # Bot's WhatsApp number (sends messages)
 TARGET_NUMBER=919899998761    # Your WhatsApp number (receives messages)
 SELF_CHAT=false               # Dual-number mode
 ALLOWED_NUMBERS=919899998761  # Only your number can interact
@@ -52,7 +52,7 @@ Your AI will now:
 ## 🔒 Privacy & Security
 
 ### Dual-Number Mode (Recommended)
-- **Bot runs on separate WhatsApp** (brother's/sister's number)
+- **Bot runs on separate WhatsApp** (sends messages)
 - **Only your messages are processed** (ALLOWED_NUMBERS)
 - **Other conversations ignored** (privacy protected)
 - **Natural left/right conversation flow**

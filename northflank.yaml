@@ -12,7 +12,7 @@ services:
     type: application
     source:
       type: git
-      repository: Trijal-Bhardwaj/ai-assistant-bot
+      repository: yourusername/ai-assistant-bot
       branch: main
     build:
       command: npm install
@@ -66,4 +66,27 @@ volumes:
 # Networking
 networking:
   domains:
-    - ai-assistant-bot.northflank.app 
+    - ai-assistant-bot.northflank.app
+
+# Environment Variables (for reference - use your actual values from .env)
+env:
+  SOURCE_NUMBER: "your-bot-phone-number"
+  TARGET_NUMBER: "your-personal-phone-number"
+  SELF_CHAT: "false"
+  ALLOWED_NUMBERS: "your-personal-phone-number"
+  TIMEZONE: "Asia/Kolkata"
+  BOT_NAME: "Your Bot Name"
+  BOT_STATUS: "Your bot status message"
+  BOT_ABOUT: "Your bot about message"
+  NODE_ENV: "production"
+  DEBUG_MODE: "false"
+  LOG_LEVEL: "info"
+  VOICE_MESSAGES_ENABLED: "false"
+  MIN_MESSAGE_INTERVAL: "5"
+  ENABLE_MONITORING: "true"
+  MONITORING_PORT: "3000"
+  TTS_PROVIDER: "gtts"
+  TTS_LANGUAGE: "hi-IN"
+  MONGODB_URI: "your-mongodb-connection-string"
+  REDIS_URL: "your-redis-connection-string"
+  OPENAI_API_KEY: "your-openai-api-key" 

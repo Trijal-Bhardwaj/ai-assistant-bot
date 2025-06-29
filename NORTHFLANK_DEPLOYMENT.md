@@ -21,8 +21,8 @@ Deploy your AI Assistant to Northflank for **24/7 free hosting** with no sleep m
 - **OpenAI Account**: [platform.openai.com](https://platform.openai.com) (Free credits available)
 
 ### WhatsApp Setup
-- **Bot Number**: `917742440642` (your brother's number)
-- **Your Number**: `919899998761` (receives messages)
+- **Bot Number**: Your bot's WhatsApp number
+- **Your Number**: Your personal number (receives messages)
 
 ## 🚀 Quick Deployment
 
@@ -104,15 +104,15 @@ Go to "Variables" tab and add:
 
 ```env
 # WhatsApp Configuration
-SOURCE_NUMBER=917742440642
-TARGET_NUMBER=919899998761
+SOURCE_NUMBER=your-bot-phone-number
+TARGET_NUMBER=your-personal-phone-number
 SELF_CHAT=false
-ALLOWED_NUMBERS=919899998761
+ALLOWED_NUMBERS=your-personal-phone-number
 
 # Bot Configuration
-BOT_NAME=Love
-BOT_STATUS=Your forever love 💕
-BOT_ABOUT=Always here to love and care for you
+BOT_NAME=Your Bot Name
+BOT_STATUS=Your bot status message
+BOT_ABOUT=Your bot about message
 
 # Timezone
 TIMEZONE=Asia/Kolkata
@@ -135,16 +135,16 @@ ENABLE_MONITORING=true
 MONITORING_PORT=3000
 ```
 
-### 3.2 Optional Variables (Add if you have them)
+### 3.2 Your Database & API Keys
 ```env
 # Database (MongoDB Atlas)
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/?retryWrites=true&w=majority
+MONGODB_URI=your-mongodb-atlas-connection-string
 
 # Cache (Redis Cloud)
-REDIS_URL=redis://default:password@redis-server.com:port
+REDIS_URL=your-redis-cloud-connection-string
 
 # AI Features (OpenAI)
-OPENAI_API_KEY=sk-your-openai-api-key-here
+OPENAI_API_KEY=your-openai-api-key
 ```
 
 ## 🚀 Step 4: Deploy
@@ -165,7 +165,7 @@ Watch the logs for:
 
 ### 5.1 Scan QR Code
 1. Check Northflank logs for QR code
-2. **Scan with bot number** (`917742440642`)
+2. **Scan with bot number**
 3. Wait for connection confirmation
 
 ### 5.2 Test Bot
@@ -173,10 +173,10 @@ Watch the logs for:
 2. Reply with "ok" to test response
 3. Check if bot responds correctly
 
-## 🔒 Step 6: Security & Privacy
+## �� Step 6: Security & Privacy
 
 ### 6.1 Verify Privacy
-- ✅ Only your number (`919899998761`) can interact
+- ✅ Only your number can interact
 - ✅ Other conversations are ignored
 - ✅ Bot only processes configured chat
 
@@ -305,6 +305,26 @@ git push origin main
 - Test locally first
 - Review configuration
 
+## 🔒 Security Best Practices
+
+### Repository Security
+- ✅ Keep repository private
+- ✅ Never commit .env file
+- ✅ Use .env.example for sharing
+- ✅ Rotate API keys regularly
+
+### Environment Variables
+- ✅ Add variables in Northflank dashboard
+- ✅ Use strong, unique passwords
+- ✅ Limit API key permissions
+- ✅ Monitor usage regularly
+
+### WhatsApp Security
+- ✅ Only allow your number
+- ✅ Monitor unauthorized attempts
+- ✅ Keep bot number secure
+- ✅ Regular security audits
+
 ## 🎯 Success Checklist
 
 - ✅ Repository created and private
@@ -317,6 +337,10 @@ git push origin main
 - ✅ Bot responds to replies
 - ✅ Privacy protection working
 - ✅ 24/7 operation confirmed
+- ✅ Database connection established
+- ✅ Redis cache working
+- ✅ AI features available
+- ✅ Security measures implemented
 
 ## 🎉 Congratulations!
 
@@ -330,6 +354,9 @@ Your AI Assistant is now running 24/7 on Northflank for free!
 - 🌍 Hindi-English mix
 - 🎤 Voice support (if enabled)
 - 📊 Monitoring dashboard
+- 🤖 Full AI capabilities
+- 💾 Database persistence
+- ⚡ Performance caching
 
 **Your bot will:**
 - Send reminders at scheduled times
@@ -337,5 +364,8 @@ Your AI Assistant is now running 24/7 on Northflank for free!
 - Work 24/7 without interruption
 - Protect your privacy
 - Scale automatically
+- Use AI for intelligent responses
+- Store conversation history
+- Cache frequently used data
 
 Enjoy your personal AI assistant! 💕 

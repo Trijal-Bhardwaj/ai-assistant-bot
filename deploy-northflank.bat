@@ -109,29 +109,24 @@ echo    - Branch: main
 echo    - Build Command: npm install
 echo    - Start Command: npm start
 echo.
-echo 8. 🔐 Add Environment Variables:
-echo    - SOURCE_NUMBER=917742440642
-echo    - TARGET_NUMBER=919899998761
-echo    - SELF_CHAT=false
-echo    - ALLOWED_NUMBERS=919899998761
-echo    - MONGODB_URI=your-mongodb-uri
-echo    - REDIS_URL=your-redis-url
-echo    - OPENAI_API_KEY=your-openai-key
-echo    - TIMEZONE=Asia/Kolkata
-echo    - BOT_NAME=Love
-echo    - BOT_STATUS=Your forever love 💕
-echo    - BOT_ABOUT=Always here to love and care for you
-echo    - VOICE_MESSAGES_ENABLED=false
-echo    - DEBUG_MODE=false
-echo    - NODE_ENV=production
+echo 8. 🔐 Add Environment Variables from your .env file:
+echo    - Copy all variables from your .env file
+echo    - Add them in Northflank Variables tab
+echo    - Make sure to include:
+echo      * SOURCE_NUMBER (your bot number)
+echo      * TARGET_NUMBER (your personal number)
+echo      * MONGODB_URI (your database connection)
+echo      * REDIS_URL (your cache connection)
+echo      * OPENAI_API_KEY (your AI API key)
 echo.
 echo 9. 🚀 Click 'Deploy'
 echo 10. 📱 Check logs for QR code
-echo 11. 📲 Scan QR code with bot number (917742440642)
+echo 11. 📲 Scan QR code with bot number
 echo.
 
 echo ✅ Your AI Assistant will be running 24/7 on Northflank!
-echo ⚠️ Remember to add your environment variables in Northflank dashboard
+echo ⚠️ IMPORTANT: Add your environment variables from .env file in Northflank dashboard
+echo ⚠️ Never commit your .env file to Git (it's already in .gitignore)
 echo.
 echo 📁 Repository URL: https://github.com/%GITHUB_USERNAME%/%REPO_NAME%
 echo 🌐 Northflank Dashboard: https://app.northflank.com
