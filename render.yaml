@@ -31,11 +31,11 @@ services:
 databases:
   - name: vibe-coding-mongodb
     databaseName: vibe_coding
-    plan: starter
+    plan: free
     region: oregon
     ipAllowList: []
 
   - name: vibe-coding-redis
-    plan: starter
+    plan: free
     region: oregon
     ipAllowList: [] 
