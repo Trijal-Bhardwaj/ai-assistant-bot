@@ -1,0 +1,24 @@
+{
+  "watch": [
+    "index.js",
+    "server.js",
+    "services/",
+    "config/",
+    "models/",
+    "messageTemplates.js"
+  ],
+  "ignore": [
+    "whatsapp-sessions/*",
+    ".wwebjs_cache/*",
+    ".wwebjs_auth/*",
+    "node_modules/*",
+    "logs/*",
+    "voice_messages/*",
+    "test_voice/*"
+  ],
+  "ext": "js,json",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "delay": "1000"
+}

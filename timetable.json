@@ -1,0 +1,367 @@
+{
+  "wfo": {
+    "days": ["Tuesday", "Thursday"],
+    "schedule": [
+      {
+        "time": "04:45",
+        "activity": "Wake Up & Hydration Break 1",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "04:50",
+        "activity": "Morning Stretching Routine",
+        "description": "10-minute full-body stretching routine."
+      },
+      {
+        "time": "05:00",
+        "activity": "Morning 5 km Run",
+        "description": "5 km run (~300-400 calories burned)."
+      },
+      {
+        "time": "05:45",
+        "activity": "Bathing, Hygiene, and Getting Ready",
+        "description": "Shower, brush teeth, and prepare for the day."
+      },
+      {
+        "time": "06:05",
+        "activity": "Breakfast",
+        "description": "4 boiled eggs, 2 whole wheat rotis, paneer bhurji, and green tea (~400 calories)."
+      },
+      {
+        "time": "06:15",
+        "activity": "Cab Commute & Relaxation",
+        "description": "Use commute time to unwind, read, or plan."
+      },
+      {
+        "time": "08:00",
+        "activity": "Hydration Break 2",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "08:05",
+        "activity": "Work Session 1 - High-Priority Tasks",
+        "description": "Focus on critical office work and deliverables."
+      },
+      {
+        "time": "10:00",
+        "activity": "Daily Stand-Up Meeting",
+        "description": "Team stand-up meeting."
+      },
+      {
+        "time": "10:30",
+        "activity": "Work Session 2 - Medium-Priority Tasks",
+        "description": "Address medium-priority tasks like debugging or small deliverables."
+      },
+      {
+        "time": "11:45",
+        "activity": "Hydration Break 3",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "11:50",
+        "activity": "Work Session 3 - Low-Priority Tasks",
+        "description": "Complete emails, follow-ups, and documentation."
+      },
+      {
+        "time": "12:45",
+        "activity": "Lunch Break",
+        "description": "2 rotis, dal, sabzi, curd, salad, and a fruit (~600 calories)."
+      },
+      {
+        "time": "13:30",
+        "activity": "Hydration Break 4",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "13:35",
+        "activity": "Work Session 4 - Admin & Wrap-Up",
+        "description": "Wrap up remaining office work and light tasks."
+      },
+      {
+        "time": "15:00",
+        "activity": "Cab Commute & Relaxation",
+        "description": "Use commute time to unwind, read, or plan."
+      },
+      {
+        "time": "17:00",
+        "activity": "Hydration Break 5",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "17:05",
+        "activity": "Evening Gym Workout",
+        "description": "Weight training and cardio (~300-400 calories burned)."
+      },
+      {
+        "time": "18:00",
+        "activity": "Stock Market & Financial Studies",
+        "description": "Learn about trading, investing, and financial planning."
+      },
+      {
+        "time": "19:00",
+        "activity": "Dinner",
+        "description": "1 multigrain roti, vegetable curry, tofu, and soup (~400 calories)."
+      },
+      {
+        "time": "19:30",
+        "activity": "Jawline, Eye, Hair & Skin Care",
+        "description": "Care routines for jawline (exercises), eyes, hair, and skin (10 minutes each)."
+      },
+      {
+        "time": "20:00",
+        "activity": "Hydration Break 6",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "20:05",
+        "activity": "Coding & Development",
+        "description": "Work on Leetcode, system design, projects, and resume building."
+      },
+      {
+        "time": "22:45",
+        "activity": "Sleep",
+        "description": "Consistent sleep schedule (6 hours)."
+      }
+    ]
+  },
+  "wfh": {
+    "days": ["Monday", "Wednesday", "Friday"],
+    "schedule": [
+      {
+        "time": "04:45",
+        "activity": "Wake Up & Hydration Break 1",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "04:50",
+        "activity": "Morning Stretching Routine",
+        "description": "10-minute full-body stretching routine."
+      },
+      {
+        "time": "05:00",
+        "activity": "Morning 5 km Run",
+        "description": "5 km run (~300-400 calories burned)."
+      },
+      {
+        "time": "05:45",
+        "activity": "Bathing, Hygiene, and Getting Ready",
+        "description": "Shower, brush teeth, and prepare for the day."
+      },
+      {
+        "time": "06:05",
+        "activity": "Breakfast",
+        "description": "4 boiled eggs, 2 whole wheat rotis, paneer bhurji, and green tea (~400 calories)."
+      },
+      {
+        "time": "06:15",
+        "activity": "Morning Leetcode Session",
+        "description": "Solve competitive coding problems during the commute."
+      },
+      {
+        "time": "08:00",
+        "activity": "Hydration Break 2",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "08:05",
+        "activity": "Work Session 1 - High-Priority Tasks",
+        "description": "Focus on critical office work and deliverables."
+      },
+      {
+        "time": "10:00",
+        "activity": "Daily Stand-Up Meeting",
+        "description": "Team stand-up meeting."
+      },
+      {
+        "time": "10:30",
+        "activity": "Work Session 2 - Medium-Priority Tasks",
+        "description": "Address medium-priority tasks like debugging or small deliverables."
+      },
+      {
+        "time": "11:45",
+        "activity": "Hydration Break 3",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "11:50",
+        "activity": "Work Session 3 - Low-Priority Tasks",
+        "description": "Complete emails, follow-ups, and documentation."
+      },
+      {
+        "time": "12:45",
+        "activity": "Lunch Break",
+        "description": "Meal: 2 rotis, dal, sabzi, curd, salad, and a fruit (~600 calories)."
+      },
+      {
+        "time": "13:30",
+        "activity": "Hydration Break 4",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "13:35",
+        "activity": "Work Session 4 - Admin & Wrap-Up",
+        "description": "Wrap up remaining office work and light tasks."
+      },
+      {
+        "time": "17:00",
+        "activity": "Hydration Break 5",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "17:05",
+        "activity": "Evening Gym Workout",
+        "description": "Weight training and cardio (~300-400 calories burned)."
+      },
+      {
+        "time": "18:00",
+        "activity": "Stock Market & Financial Studies",
+        "description": "Learn about trading, investing, and financial planning."
+      },
+      {
+        "time": "19:00",
+        "activity": "Dinner",
+        "description": "1 multigrain roti, vegetable curry, tofu, and soup (~400 calories)."
+      },
+      {
+        "time": "19:30",
+        "activity": "Jawline, Eye, Hair & Skin Care",
+        "description": "Care routines for jawline (exercises), eyes, hair, and skin (10 minutes each)."
+      },
+      {
+        "time": "20:00",
+        "activity": "Hydration Break 6",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "20:05",
+        "activity": "Coding & Development",
+        "description": "Work on Leetcode, system design, projects, and resume building."
+      },
+      {
+        "time": "22:45",
+        "activity": "Sleep",
+        "description": "Consistent sleep schedule (6 hours)."
+      }
+    ]
+  },
+  "weekend": {
+    "days": ["Saturday", "Sunday"],
+    "schedule": [
+      {
+        "time": "04:45",
+        "activity": "Wake Up & Hydration Break 1",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "04:50",
+        "activity": "Morning Stretching Routine",
+        "description": "10-minute full-body stretching routine."
+      },
+      {
+        "time": "05:00",
+        "activity": "Morning 5 km Run",
+        "description": "5 km run (~300-400 calories burned)."
+      },
+      {
+        "time": "05:45",
+        "activity": "Bathing, Hygiene, and Getting Ready",
+        "description": "Shower, brush teeth, and prepare for the day."
+      },
+      {
+        "time": "06:05",
+        "activity": "Breakfast",
+        "description": "4 boiled eggs, 2 whole wheat rotis, paneer bhurji, and green tea (~400 calories)."
+      },
+      {
+        "time": "06:15",
+        "activity": "Slot 1 - Leetcode Contest",
+        "description": "Participate in competitive Leetcode contests and solve high-level problems."
+      },
+      {
+        "time": "07:55",
+        "activity": "Hydration Break 2",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "08:00",
+        "activity": "Slot 2 - Leetcode Contest",
+        "description": "Continue solving Leetcode contest problems and analyze solutions."
+      },
+      {
+        "time": "10:00",
+        "activity": "Break and Planning 1",
+        "description": "Take a short break, relax, and plan for the remaining day."
+      },
+      {
+        "time": "10:30",
+        "activity": "Slot 3 - System Design",
+        "description": "Learn advanced system design concepts and practice solving design problems."
+      },
+      {
+        "time": "11:45",
+        "activity": "Hydration Break 3",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "12:45",
+        "activity": "Lunch Break",
+        "description": "2 rotis, dal, sabzi, curd, salad, and a fruit (~600 calories)."
+      },
+      {
+        "time": "13:30",
+        "activity": "Hydration Break 4",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "13:35",
+        "activity": "Slot 4 - Frontend/Backend Development",
+        "description": "Work on personal projects, resume building, portfolio updates, or online courses."
+      },
+      {
+        "time": "16:30",
+        "activity": "Break and Planning 2",
+        "description": "Take a break and strategize for evening activities."
+      },
+      {
+        "time": "17:00",
+        "activity": "Hydration Break 5",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "17:05",
+        "activity": "Evening Gym Workout",
+        "description": "Weight training and cardio (~300-400 calories burned)."
+      },
+      {
+        "time": "18:00",
+        "activity": "Stock Market & Financial Studies",
+        "description": "Learn about trading, investing, and financial planning."
+      },
+      {
+        "time": "19:00",
+        "activity": "Dinner",
+        "description": "1 multigrain roti, vegetable curry, tofu, and soup (~400 calories)."
+      },
+      {
+        "time": "19:30",
+        "activity": "Jawline, Eye, Hair & Skin Care",
+        "description": "Care routines for jawline (exercises), eyes, hair, and skin (10 minutes each)."
+      },
+      {
+        "time": "20:00",
+        "activity": "Hydration Break 6",
+        "description": "Drink 500 ml of water."
+      },
+      {
+        "time": "20:05",
+        "activity": "Slot 5 - CF/Atcoder Contests",
+        "description": "Participate in Codeforces/Atcoder contests and analyze solutions."
+      },
+      {
+        "time": "22:45",
+        "activity": "Sleep",
+        "description": "Consistent sleep schedule (6 hours)."
+      }
+    ]
+  }
+}

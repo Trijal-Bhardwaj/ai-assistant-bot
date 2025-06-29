@@ -1,0 +1,69 @@
+# Northflank Configuration for AI Assistant WhatsApp Bot
+version: 1
+
+# Application configuration
+application:
+  name: ai-assistant-bot
+  description: AI Assistant WhatsApp Bot with dual-number support
+
+# Service configuration
+services:
+  - name: whatsapp-bot
+    type: application
+    source:
+      type: git
+      repository: Trijal-Bhardwaj/ai-assistant-bot
+      branch: main
+    build:
+      command: npm install
+    start:
+      command: npm start
+    resources:
+      cpu: 0.5
+      memory: 512Mi
+    ports:
+      - port: 3000
+        protocol: http
+    healthCheck:
+      path: /
+      port: 3000
+      initialDelay: 30
+      period: 10
+      timeout: 5
+      failureThreshold: 3
+    environment:
+      NODE_ENV: production
+      LOG_LEVEL: info
+      DEBUG_MODE: false
+    secrets:
+      - SOURCE_NUMBER
+      - TARGET_NUMBER
+      - SELF_CHAT
+      - ALLOWED_NUMBERS
+      - MONGODB_URI
+      - REDIS_URL
+      - OPENAI_API_KEY
+      - TIMEZONE
+      - BOT_NAME
+      - BOT_STATUS
+      - BOT_ABOUT
+      - VOICE_MESSAGES_ENABLED
+      - MIN_MESSAGE_INTERVAL
+      - ENABLE_MONITORING
+      - MONITORING_PORT
+      - TTS_PROVIDER
+      - TTS_LANGUAGE
+
+# Volumes for persistent storage
+volumes:
+  - name: whatsapp-sessions
+    mountPath: /app/whatsapp-sessions
+    size: 1Gi
+  - name: voice-messages
+    mountPath: /app/voice_messages
+    size: 2Gi
+
+# Networking
+networking:
+  domains:
+    - ai-assistant-bot.northflank.app 
