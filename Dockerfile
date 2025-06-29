@@ -19,11 +19,15 @@ RUN apk add --no-cache \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
   PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
-# Copy package files
+# Copy package files first for better caching
 COPY package*.json ./
 
-# Install dependencies
-RUN npm i --only=production && npm cache clean --force
+# Configure npm to use public registry and avoid authentication issues
+RUN npm config set registry https://registry.npmjs.org/ && \
+  npm config set strict-ssl false && \
+  npm install -g npm@9.x && \
+  npm ci --only=production --no-audit --no-fund && \
+  npm cache clean --force
 
 # Copy application code
 COPY . .
