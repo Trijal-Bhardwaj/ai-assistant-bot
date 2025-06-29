@@ -25,7 +25,6 @@ services:
       - key: PORT
         value: 3000
     buildCommand: docker build -t vibe-coding-bot .
-    startCommand: docker run -p $PORT:3000 vibe-coding-bot
     autoDeploy: true
     branch: main
 
