@@ -4,6 +4,9 @@
 .env.production
 .env.staging
 
+# NPM Configuration (protect tokens)
+.npmrc
+
 # WhatsApp sessions and cache
 whatsapp-sessions/
 .wwebjs_cache/

@@ -1,0 +1,17 @@
+# NPM Configuration Example - Copy to .npmrc and customize
+registry=https://registry.npmjs.org/
+always-auth=false
+strict-ssl=false
+
+# For private packages (uncomment and add your token)
+# //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+
+# Performance optimizations
+cache=.npm-cache
+prefer-offline=true
+fund=false
+audit=false
+
+# Security
+save-exact=false
+save-prefix=^ 

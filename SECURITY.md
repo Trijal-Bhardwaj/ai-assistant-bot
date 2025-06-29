@@ -8,7 +8,9 @@ This document outlines the security measures implemented in the AI Assistant Wha
 
 ### 1. Environment Variables Protection
 - ✅ **`.env` file is in `.gitignore`** - Never committed to Git
+- ✅ **`.npmrc` file is in `.gitignore`** - Never committed to Git
 - ✅ **`.env.example` contains only placeholders** - Safe to share
+- ✅ **`.npmrc.example` contains only placeholders** - Safe to share
 - ✅ **All sensitive data in environment variables** - No hardcoded secrets
 
 ### 2. Repository Security
@@ -26,6 +28,11 @@ This document outlines the security measures implemented in the AI Assistant Wha
 - ✅ **MongoDB Atlas security** - Cloud-hosted with authentication
 - ✅ **Redis Cloud security** - Encrypted connections
 
+### 5. NPM Security
+- ✅ **NPM tokens in environment variables** - Not hardcoded
+- ✅ **Public registry by default** - No authentication required
+- ✅ **Private package support** - Via NPM_TOKEN environment variable
+
 ## 🔐 Sensitive Information
 
 ### What's Protected
@@ -34,6 +41,7 @@ This document outlines the security measures implemented in the AI Assistant Wha
 - **API keys** (OpenAI, etc.)
 - **Bot configuration**
 - **WhatsApp session data**
+- **NPM tokens** (if using private packages)
 
 ### What's Safe to Share
 - **Code structure**
@@ -46,7 +54,9 @@ This document outlines the security measures implemented in the AI Assistant Wha
 ### Before Deployment
 - [ ] Repository is private
 - [ ] `.env` file is not committed
+- [ ] `.npmrc` file is not committed
 - [ ] `.env.example` contains only placeholders
+- [ ] `.npmrc.example` contains only placeholders
 - [ ] No hardcoded secrets in code
 - [ ] Environment variables configured in hosting platform
 
@@ -55,11 +65,13 @@ This document outlines the security measures implemented in the AI Assistant Wha
 - [ ] Check logs for suspicious activity
 - [ ] Verify only your number can interact
 - [ ] Regular API key rotation
+- [ ] Regular NPM token rotation
 - [ ] Database access monitoring
 
 ### Maintenance
 - [ ] Update dependencies regularly
 - [ ] Rotate API keys periodically
+- [ ] Rotate NPM tokens periodically
 - [ ] Review access logs
 - [ ] Backup important data
 - [ ] Test security measures
@@ -70,9 +82,11 @@ This document outlines the security measures implemented in the AI Assistant Wha
 ```bash
 # ✅ Good - Use environment variables
 SOURCE_NUMBER=process.env.SOURCE_NUMBER
+NPM_TOKEN=process.env.NPM_TOKEN
 
 # ❌ Bad - Hardcoded values
 SOURCE_NUMBER="917742440642"
+NPM_TOKEN="npm_abc123..."
 ```
 
 ### 2. Repository Management
@@ -86,11 +100,12 @@ git remote add origin https://github.com/username/public-repo.git
 
 ### 3. File Protection
 ```bash
-# ✅ Good - .env in .gitignore
+# ✅ Good - .env and .npmrc in .gitignore
 echo ".env" >> .gitignore
+echo ".npmrc" >> .gitignore
 
-# ❌ Bad - Committing .env file
-git add .env
+# ❌ Bad - Committing sensitive files
+git add .env .npmrc
 git commit -m "Add configuration"
 ```
 
@@ -106,23 +121,35 @@ if (!ALLOWED_NUMBERS.includes(phoneNumber)) {
 // Process all messages
 ```
 
+### 5. NPM Token Security
+```ini
+# ✅ Good - Use environment variable
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+
+# ❌ Bad - Hardcoded token
+//registry.npmjs.org/:_authToken=npm_abc123...
+```
+
 ## 🔍 Security Monitoring
 
 ### Log Monitoring
 - **Unauthorized access attempts**
 - **Failed database connections**
 - **API key usage**
+- **NPM token usage**
 - **WhatsApp connection status**
 
 ### Access Control
 - **Phone number validation**
 - **Message source verification**
 - **Bot response filtering**
+- **NPM package access control**
 
 ### Data Protection
 - **Encrypted database connections**
 - **Secure API communications**
 - **Session data protection**
+- **NPM registry security**
 
 ## 🛠️ Security Tools
 
@@ -137,21 +164,24 @@ if (!ALLOWED_NUMBERS.includes(phoneNumber)) {
 - **Redis Cloud encryption**
 - **OpenAI API security**
 - **WhatsApp Web security**
+- **NPM registry security**
 
 ## 📞 Incident Response
 
 ### If Compromised
 1. **Immediately rotate API keys**
-2. **Check access logs**
-3. **Review recent changes**
-4. **Update security measures**
-5. **Monitor for suspicious activity**
+2. **Immediately rotate NPM tokens**
+3. **Check access logs**
+4. **Review recent changes**
+5. **Update security measures**
+6. **Monitor for suspicious activity**
 
 ### Prevention
 1. **Regular security audits**
 2. **Dependency updates**
 3. **Access log reviews**
 4. **Configuration validation**
+5. **Token rotation schedule**
 
 ## 📚 Security Resources
 
@@ -160,6 +190,7 @@ if (!ALLOWED_NUMBERS.includes(phoneNumber)) {
 - [MongoDB Security](https://docs.mongodb.com/manual/security/)
 - [Redis Security](https://redis.io/topics/security)
 - [WhatsApp Web Security](https://www.whatsapp.com/security/)
+- [NPM Security](https://docs.npmjs.com/about-audit-reports/)
 
 ### Tools
 - **npm audit** - Check for vulnerabilities
@@ -172,6 +203,7 @@ if (!ALLOWED_NUMBERS.includes(phoneNumber)) {
 ### Primary Goals
 - ✅ **Protect user privacy**
 - ✅ **Secure API keys**
+- ✅ **Secure NPM tokens**
 - ✅ **Prevent unauthorized access**
 - ✅ **Maintain data integrity**
 

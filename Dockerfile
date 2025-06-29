@@ -22,11 +22,13 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 # Copy package files first for better caching
 COPY package*.json ./
 
-# Remove any .npmrc and force public registry to avoid authentication issues
-RUN rm -f .npmrc && \
-  npm config set registry https://registry.npmjs.org/ && \
+# Copy .npmrc if it exists (for npm configuration)
+COPY .npmrc* ./
+
+# Configure npm and install dependencies
+RUN npm config set registry https://registry.npmjs.org/ && \
   npm install -g npm@9.x && \
-  npm install --only=production --no-audit --no-fund --registry=https://registry.npmjs.org/ && \
+  npm install --only=production --no-audit --no-fund && \
   npm cache clean --force
 
 # Copy application code

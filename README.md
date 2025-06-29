@@ -18,7 +18,9 @@ Your personal AI assistant that sends you timely reminders based on your daily t
 
 ### ⚠️ Important Security Notes
 - **Never commit your `.env` file** to Git (it's already in `.gitignore`)
-- **Use `.env.example`** for sharing code with others
+- **Never commit your `.npmrc` file** to Git (it's already in `.gitignore`)
+- **Use `.env.example`** for sharing environment variables
+- **Use `.npmrc.example`** for sharing npm configuration
 - **Keep your repository private** to protect sensitive information
 - **Rotate API keys regularly** for better security
 - **Only your number can interact** with the bot (ALLOWED_NUMBERS)
@@ -29,10 +31,13 @@ All sensitive information is stored in environment variables:
 - Database connection strings
 - API keys
 - Bot configuration
+- NPM tokens (if using private packages)
 
 ### Repository Security
 - ✅ `.env` file is ignored by Git
+- ✅ `.npmrc` file is ignored by Git
 - ✅ `.env.example` contains only placeholder values
+- ✅ `.npmrc.example` contains only placeholder values
 - ✅ No sensitive data in code files
 - ✅ Private repository recommended
 
@@ -82,8 +87,14 @@ pip install gtts
 # Copy the example environment file
 cp .env.example .env
 
+# Copy the example npm configuration
+cp .npmrc.example .npmrc
+
 # Edit the .env file with your configuration
 nano .env
+
+# Edit the .npmrc file with your npm configuration (if needed)
+nano .npmrc
 ```
 
 Update the `.env` file with your actual values:
@@ -99,10 +110,29 @@ MONGODB_URI=your-mongodb-connection-string
 REDIS_URL=your-redis-connection-string
 OPENAI_API_KEY=your-openai-api-key
 
+# NPM Configuration (Optional - for private packages)
+NPM_TOKEN=your-npm-token-here
+
 # Bot Configuration
 BOT_NAME=Your Bot Name
 BOT_STATUS=Your bot status message
 BOT_ABOUT=Your bot about message
+```
+
+Update the `.npmrc` file (if using private packages):
+```ini
+registry=https://registry.npmjs.org/
+always-auth=false
+strict-ssl=false
+
+# For private packages (uncomment and add your token)
+# //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+
+# Performance optimizations
+cache=.npm-cache
+prefer-offline=true
+fund=false
+audit=false
 ```
 
 ### 3. Start the Bot
@@ -227,6 +257,8 @@ ai-assistant/
 ├── package.json            # Node.js dependencies
 ├── .env.example           # Configuration template (safe to share)
 ├── .env                   # Your actual config (never commit)
+├── .npmrc.example         # NPM config template (safe to share)
+├── .npmrc                 # Your NPM config (never commit)
 └── README.md              # This file
 ```
 

@@ -2,10 +2,6 @@
 node_modules
 npm-debug.log*
 
-# NPM configuration files
-.npmrc
-.npm
-
 # Environment files
 .env
 .env.local

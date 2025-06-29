@@ -32,6 +32,10 @@ MONGODB_URI=your-mongodb-atlas-connection-string
 REDIS_URL=your-redis-cloud-connection-string
 OPENAI_API_KEY=your-openai-api-key
 
+NPM CONFIGURATION (Optional - for private packages):
+---------------------------------------------------
+NPM_TOKEN=your-npm-token-here
+
 DEPLOYMENT STEPS:
 ----------------
 1. Go to Northflank dashboard
@@ -47,7 +51,9 @@ DEPLOYMENT STEPS:
 SECURITY CHECKLIST:
 ------------------
 ✅ .env file is in .gitignore (not committed to Git)
+✅ .npmrc file is in .gitignore (not committed to Git)
 ✅ .env.example contains only placeholder values
+✅ .npmrc.example contains only placeholder values
 ✅ No sensitive data in deployment scripts
 ✅ No API keys in README files
 ✅ Repository is private
@@ -56,10 +62,13 @@ SECURITY CHECKLIST:
 IMPORTANT NOTES:
 ---------------
 🔒 Never commit your .env file to Git
-🔒 Use .env.example for sharing code
+🔒 Never commit your .npmrc file to Git
+🔒 Use .env.example for sharing environment variables
+🔒 Use .npmrc.example for sharing npm configuration
 🔒 Add actual values only in Northflank dashboard
 🔒 Keep your repository private
 🔒 Rotate API keys regularly
+🔒 Rotate npm tokens regularly
 ✅ You have MongoDB Atlas connected
 ✅ You have Redis Cloud connected  
 ✅ You have OpenAI API key configured
