@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: vibe-coding-bot
+    runtime: docker
+    plan: starter
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: BOT_NUMBER
+        sync: false
+      - key: USER_NUMBER
+        sync: false
+      - key: ALLOWED_NUMBERS
+        sync: false
+      - key: NPM_TOKEN
+        sync: false
+      - key: LOG_LEVEL
+        value: info
+      - key: PORT
+        value: 3000
+    buildCommand: docker build -t vibe-coding-bot .
+    startCommand: docker run -p $PORT:3000 vibe-coding-bot
+    autoDeploy: true
+    branch: main
+
+databases:
+  - name: vibe-coding-mongodb
+    databaseName: vibe_coding
+    plan: starter
+    region: oregon
+    ipAllowList: []
+
+  - name: vibe-coding-redis
+    plan: starter
+    region: oregon
+    ipAllowList: [] 

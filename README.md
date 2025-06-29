@@ -233,18 +233,25 @@ The bot responds to your messages:
 3. Add environment variables in Northflank dashboard
 4. Deploy automatically
 5. True 24/7 operation, no sleep mode
+6. **📖 [Northflank Deployment Guide](NORTHFLANK_DEPLOYMENT.md)**
 
-### Option 3: Railway (Free Tier)
+### Option 3: Render (Free Tier)
+1. Push code to GitHub (private repository)
+2. Connect Render to your GitHub repo
+3. Deploy using `render.yaml` configuration
+4. Free tier available (sleeps after 15 min inactivity)
+5. **📖 [Render Deployment Guide](RENDER_DEPLOYMENT.md)**
+
+### Option 4: Railway (Paid Only)
 1. Push code to GitHub
 2. Connect Railway to your GitHub repo
 3. Deploy automatically
-4. Free tier available
+4. **Note**: No longer offers free tier
 
-### Option 4: Render (Free Tier)
-1. Create account on Render
-2. Connect your GitHub repo
-3. Deploy as a web service
-4. Free tier available
+### Option 5: Fly.io (Free Tier)
+1. Push code to GitHub
+2. Deploy using Fly CLI
+3. Free tier available (limited resources)
 
 ## 📁 Project Structure
 
@@ -255,10 +262,15 @@ ai-assistant/
 ├── timetable.json          # Your schedule data
 ├── voiceGenerator.py       # Voice message generator
 ├── package.json            # Node.js dependencies
+├── Dockerfile              # Docker configuration
+├── render.yaml             # Render deployment config
+├── northflank.yaml         # Northflank deployment config
 ├── .env.example           # Configuration template (safe to share)
 ├── .env                   # Your actual config (never commit)
 ├── .npmrc.example         # NPM config template (safe to share)
 ├── .npmrc                 # Your NPM config (never commit)
+├── NORTHFLANK_DEPLOYMENT.md # Northflank deployment guide
+├── RENDER_DEPLOYMENT.md    # Render deployment guide
 └── README.md              # This file
 ```
 
