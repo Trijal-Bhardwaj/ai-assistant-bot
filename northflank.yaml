@@ -15,7 +15,9 @@ services:
       repository: yourusername/ai-assistant-bot
       branch: main
     build:
-      command: npm install
+      command: |
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+        npm install
     start:
       command: npm start
     resources:
@@ -43,6 +45,7 @@ services:
       - MONGODB_URI
       - REDIS_URL
       - OPENAI_API_KEY
+      - NPM_TOKEN
       - TIMEZONE
       - BOT_NAME
       - BOT_STATUS
@@ -70,14 +73,14 @@ networking:
 
 # Environment Variables (for reference - use your actual values from .env)
 env:
-  SOURCE_NUMBER: "your-bot-phone-number"
-  TARGET_NUMBER: "your-personal-phone-number"
-  SELF_CHAT: "false"
-  ALLOWED_NUMBERS: "your-personal-phone-number"
+  SOURCE_NUMBER: "9198999998761"
+  TARGET_NUMBER: "9198999998761"
+  SELF_CHAT: "true"
+  ALLOWED_NUMBERS: "9198999998761"
   TIMEZONE: "Asia/Kolkata"
-  BOT_NAME: "Your Bot Name"
-  BOT_STATUS: "Your bot status message"
-  BOT_ABOUT: "Your bot about message"
+  BOT_NAME: "AI Assistant"
+  BOT_STATUS: "Your personal AI assistant"
+  BOT_ABOUT: "Always here for you ❤️"
   NODE_ENV: "production"
   DEBUG_MODE: "false"
   LOG_LEVEL: "info"
@@ -89,4 +92,5 @@ env:
   TTS_LANGUAGE: "hi-IN"
   MONGODB_URI: "your-mongodb-connection-string"
   REDIS_URL: "your-redis-connection-string"
-  OPENAI_API_KEY: "your-openai-api-key" 
+  OPENAI_API_KEY: "your-openai-api-key"
+  NPM_TOKEN: "your-npm-token" 

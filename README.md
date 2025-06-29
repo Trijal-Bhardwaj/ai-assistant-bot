@@ -41,6 +41,35 @@ All sensitive information is stored in environment variables:
 - ✅ No sensitive data in code files
 - ✅ Private repository recommended
 
+## 🔑 NPM Token Setup
+
+### Why NPM Token is Required
+- **Deployment Authentication**: Many hosting platforms require npm authentication during build
+- **Private Packages**: Access to private npm packages (if needed in future)
+- **Rate Limiting**: Higher rate limits for authenticated requests
+- **Security**: Secure package installation without exposing credentials
+
+### Quick Setup
+1. **Get your NPM token** from [npmjs.com/settings/tokens](https://www.npmjs.com/settings/tokens)
+2. **Run the setup script**:
+   ```bash
+   ./setup-npm-token.sh
+   ```
+3. **Or manually add to `.env` file**:
+   ```bash
+   NPM_TOKEN=npm_your_actual_token_here
+   ```
+4. **Set in hosting platform** (Render, Northflank, Railway, etc.)
+
+### Verification
+Test your setup:
+```bash
+./verify-npm-token.sh
+```
+
+### Detailed Guide
+See [NPM_TOKEN_SETUP.md](./NPM_TOKEN_SETUP.md) for comprehensive setup instructions, security best practices, and troubleshooting.
+
 ## 📋 Your Timetable Structure
 
 The bot supports three different schedules:

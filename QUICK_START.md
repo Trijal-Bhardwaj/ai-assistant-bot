@@ -24,7 +24,7 @@ SELF_CHAT=false               # Dual-number mode
 ALLOWED_NUMBERS=919899998761  # Only your number can interact
 
 # Self-Chat Mode (Alternative)
-SOURCE_NUMBER=919899998761    # Your WhatsApp number
+SOURCE_NUMBER=917742440642    # Your WhatsApp number
 TARGET_NUMBER=919899998761    # Your WhatsApp number (same as SOURCE)
 SELF_CHAT=true                # Self-chat mode
 ALLOWED_NUMBERS=919899998761  # Only your number can interact

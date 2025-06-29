@@ -188,7 +188,7 @@ fly deploy
 ## 🔒 Security Features
 
 ### Phone Number Protection
-The bot is configured to **ONLY** respond to your number (`+91 98999998761`). All other numbers are blocked.
+The bot is configured to **ONLY** respond to your number (`9198999998761`). All other numbers are blocked.
 
 ### Dual-Number Security
 - **SOURCE_NUMBER**: Bot's number (WhatsApp Business/secondary)

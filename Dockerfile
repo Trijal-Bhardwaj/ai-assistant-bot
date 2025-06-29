@@ -25,11 +25,18 @@ COPY package*.json ./
 # Copy .npmrc if it exists (for npm configuration)
 COPY .npmrc* ./
 
-# Configure npm and install dependencies
-RUN npm config set registry https://registry.npmjs.org/ && \
+# Configure npm with token authentication and install dependencies
+ARG NPM_TOKEN
+RUN if [ -n "$NPM_TOKEN" ]; then \
+  echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc; \
+  fi && \
+  npm config set registry https://registry.npmjs.org/ && \
   npm install -g npm@9.x && \
   npm install --only=production --no-audit --no-fund && \
-  npm cache clean --force
+  npm cache clean --force && \
+  if [ -n "$NPM_TOKEN" ]; then \
+  rm -f .npmrc; \
+  fi
 
 # Copy application code
 COPY . .

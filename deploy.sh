@@ -122,7 +122,7 @@ echo "   - Check logs and statistics"
 echo ""
 echo "📚 For detailed instructions, see DEPLOYMENT_GUIDE.md"
 echo ""
-echo "🔒 Security Note: Bot is configured to ONLY respond to +91 98999998761"
+echo "🔒 Security Note: Bot is configured to ONLY respond to 9198999998761"
 echo ""
 
 # Test local setup
