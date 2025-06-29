@@ -26,7 +26,7 @@ COPY package*.json ./
 RUN npm config set registry https://registry.npmjs.org/ && \
   npm config set strict-ssl false && \
   npm install -g npm@9.x && \
-  npm ci --only=production --no-audit --no-fund && \
+  npm install --only=production --no-audit --no-fund && \
   npm cache clean --force
 
 # Copy application code
